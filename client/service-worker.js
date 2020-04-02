@@ -1,6 +1,13 @@
-console.log(`Hello from your friendly neighborhood service worker!`);
-
-const FILES_TO_CACHE = [`/`, `/index.html`, `/dist/index.bundle.js`];
+const FILES_TO_CACHE = [
+  `/`,
+  `/index.html`,
+  `/dist/index.bundle.js`,
+  `/dist/manifest.json`,
+  `/dist/assets/icons/icon_96x96.png`,
+  `/dist/assets/icons/icon_128x128.png`,
+  `/dist/assets/icons/icon_256x256.png`,
+  `/dist/assets/icons/icon_512x512.png`
+];
 
 const CACHE_NAME = `static-cache-v1`;
 const DATA_CACHE_NAME = `data-cache-v1`;
