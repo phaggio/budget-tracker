@@ -5,29 +5,29 @@ const pendingObjectStoreName = `pending`;
 // create a new db request for a "budget" database.
 const request = indexedDB.open(`budget`, 2);
 
-request.onupgradeneeded = event => {
-  const db = request.result;
+  request.onupgradeneeded = event => {
+    const db = request.result;
 
-  // create object store called "pending" and set autoIncrement to true
-  // const db = event.target.result;
-  console.log(event);
+    // create object store called "pending" and set autoIncrement to true
+    // const db = event.target.result;
+    console.log(event);
 
-  if (!db.objectStoreNames.contains(pendingObjectStoreName)) {
-    db.createObjectStore(pendingObjectStoreName, { autoIncrement: true });
-  }
-};
+    if (!db.objectStoreNames.contains(pendingObjectStoreName)) {
+      db.createObjectStore(pendingObjectStoreName, { autoIncrement: true });
+    }
+  };
 
-request.onsuccess = event => {
-  console.log(`Success! ${event.type}`);
-  // check if app is online before reading from db
-  if (navigator.onLine) {
-    checkDatabase();
-  }
-};
+  request.onsuccess = event => {
+    console.log(`Success! ${event.type}`);
+    // check if app is online before reading from db
+    if (navigator.onLine) {
+      checkDatabase();
+    }
+  };
 
-request.onerror = event => console.error(event);
+  request.onerror = event => console.error(event);
 
-function checkDatabase() {
+  function checkDatabase() {
   const db = request.result;
 
   // open a transaction on your pending db
@@ -65,7 +65,7 @@ function checkDatabase() {
 }
 
 // eslint-disable-next-line no-unused-vars
-function saveRecord(record) {
+export function saveRecord(record) {
   const db = request.result;
 
   // create a transaction on the pending db with readwrite access
