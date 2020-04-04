@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "watch": "nodemon server"
+    "watch": "nodemon server",
+    "heroku-postbuild": "cd client && webpack -p"
   },
   "author": "Richard Wang",
   "license": "ISC",
