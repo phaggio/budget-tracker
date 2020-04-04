@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node server.js",
     "watch": "nodemon server",
-    "heroku-postbuild": "cd client && npm start"
+    "client-install": "cd client && npm install",
+    "client-start": "cd client && npm run start",
+    "heroku-postbuild": "npm run client-install && npm run client-start"
   },
   "author": "Richard Wang",
   "license": "ISC",
