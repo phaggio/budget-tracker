@@ -15,12 +15,18 @@ Application Link: https://phaggio-budget-tracker.herokuapp.com/
 
 ## Node.js Modules
 * express
-* mogoose
+* mongoose
 * @babel/core
 * @babel/preset-env
 * babel-loader
 * webpack
 * webpack-cli
 * webpack-pwa-manifest
+
+## Features
+* installable progressive web app
+* service-worker for offline operation
+* separated client and server dependencies
+* ES6 code to backward compatible version of Javascript using Babel
 
 
