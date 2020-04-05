@@ -23,6 +23,9 @@ Application Link: https://phaggio-budget-tracker.herokuapp.com/
 * webpack-cli
 * webpack-pwa-manifest
 
+## Other Resources (website)
+* icons-icons.com
+
 ## Features
 * installable progressive web app
 * service-worker for offline operation
